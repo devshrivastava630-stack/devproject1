@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoHorizons | Smart Waste Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">EcoHorizons</div>
+        <ul class="nav-links">
+            <li><a href="#upload-section">Report Waste</a></li>
+            <li><a href="#evidence-section">System Status</a></li>
+            <li><a href="#signup-section" class="btn-primary">Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Manage Waste. <br>Build a Greener Future.</h1>
+            <p>Everything you need to track, report, and manage waste efficiently.</p>
+            <a href="#signup-section" class="btn-primary hero-btn">Get Started</a>
+        </div>
+    </header>
+
+    <section id="evidence-section" class="evidence-section">
+        <div class="container" style="max-width: 1000px;">
+            <h2>System Status & Evidence</h2>
+            <p>Comparing reported field conditions with our real-time monitoring data. Designed by Dev Srivastav.</p>
+            
+            <div class="photo-grid">
+                <div class="photo-card">
+                    <h3>Reported Location</h3>
+                    <div class="image-wrapper">
+                        <img src="garbage-pile.png" alt="Pile of Garbage">
+                    </div>
+                    <p class="photo-caption">Visual evidence of unmanaged waste.</p>
+                </div>
+
+                <div class="photo-card dark-card">
+                    <h3 style="color: white;">Real-Time Data</h3>
+                    <div class="image-wrapper">
+                        <img src="dataset-card.jpg" alt="Waste Monitoring Graph">
+                    </div>
+                    <p class="photo-caption" style="color: #ccc;">Live coordinates mapping.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="upload-section" class="upload-section">
+        <div class="container">
+            <h2>Report a New Waste Issue</h2>
+            <div class="upload-box" id="upload-box">
+                <input type="file" id="image-upload" accept="image/*" hidden>
+                <label for="image-upload" class="upload-label">
+                    <div id="upload-placeholder">
+                        <span class="icon">📸</span>
+                        <p>Click here to upload an image</p>
+                    </div>
+                    <img id="image-preview" src="" alt="Image Preview" style="display: none;">
+                </label>
+            </div>
+            <button class="btn-secondary" id="submit-report" style="margin-top: 15px; display: none;">Submit Report</button>
+        </div>
+    </section>
+
+    <section id="signup-section" class="signup-section">
+        <div class="container">
+            <div class="form-wrapper">
+                <h2>Create Your Account</h2>
+                <form id="signup-form">
+                    <div class="input-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <button type="submit" class="btn-primary form-btn">Sign Up & Export to CSV</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
